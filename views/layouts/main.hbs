@@ -2,13 +2,29 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Payments test app</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
     <script src="https://storage.googleapis.com/prshim/v1/payment-shim.js"></script>
     <script src="js/payments.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
 </head>
 <body>
+<div class="ui fixed inverted menu">
+	<div class="ui container">
+    	<a href="#" class="header item">Bob's Store</a>
+    	<a href="#" class="item">Products</a>
+    	<a href="#" class="item">About</a> 
+    </div>
+</div>
+<div class="ui main text container">
+	{{{body}}}
+</div>
+<div class="ui inverted vertical footer segment">
 
-    {{{body}}}
-
+</div>
 </body>
 </html>
