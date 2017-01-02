@@ -1,4 +1,4 @@
-* Payments
+## Payments
 
 A sample project to explore and practice the following tech:
 
