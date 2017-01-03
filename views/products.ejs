@@ -30,7 +30,7 @@
 		      </td>
 		      <td><%= product.description %></td>
 			  <td>
-			    <a href="#" onclick="buy(productForId(<%= product.id %>))">buy</a>
+			    <a href="#" onclick="addToCart(productForId(<%= product.id %>))">buy</a>
 			  </td>
 		    </tr>
 		    <% }); %>
