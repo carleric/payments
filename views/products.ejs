@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ./partials/head.ejs %>
+    <script type="text/javascript">
+    function productForId(id) {
+    	var products = <%- JSON.stringify(products) %>;
+    	var productHash = {};
+    	for(var i = 0; i < products.length; i++){
+    		productHash[products[i].id]	= products[i];
+    	}
+    	return productHash[id];
+    }
+    </script>
+</head>
+<body>
+	<% include ./partials/header.ejs %>
+
+	<div class="ui main text container">
+		<h1 class="ui header">Payments test</h1>
+
+		<table class="ui celled padded table">
+			<% products.forEach(function(product){ %>
+		    <tr>
+		      <td>
+		        <a href="#"><%= product.title %></a>
+		      </td>
+		      <td>
+		        <a href="#"><%= product.price %></a>
+		      </td>
+		      <td><%= product.description %></td>
+			  <td>
+			    <a href="#" onclick="buy(productForId(<%= product.id %>))">buy</a>
+			  </td>
+		    </tr>
+		    <% }); %>
+		</table>
+	</div>
+
+	<% include ./partials/footer.ejs %>
+
+</body>
+</html>
+
